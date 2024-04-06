@@ -1,0 +1,129 @@
+body {
+
+    margin: 0;
+
+    height: 100vh;
+
+    background: #000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+  }
+
+  .moon-container {
+
+    width: 100px;
+
+    height: 100px;
+
+    animation: rotateMoon 20s linear infinite;
+
+    position: relative;
+
+  }
+   @keyframes rotateMoon {
+
+    0% {
+
+      transform: rotate(0deg);
+
+    }
+
+    100% {
+
+      transform: rotate(360deg);
+
+    }
+
+  }
+
+  .moon {
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(145deg, #fff, #f0f0f0);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 8px #fff, 0 0 15px #fff, 0 0 30px #fff;
+
+    position: relative;
+  }
+   .crater {
+
+    position: absolute;
+
+    width: 15px;
+
+    height: 15px;
+
+    background: #bbb;
+
+    border-radius: 50%;
+
+  }
+
+  .crater.small {
+
+    width: 10px;
+
+    height: 10px;
+
+  }
+
+  .crater.large {
+
+    width: 20px;
+
+    height: 20px;
+
+  }
+   .crater:nth-of-type(1) { top: 10px; left: 30px; }
+
+  .crater:nth-of-type(2) { top: 50px; left: 70px; }
+
+  .crater:nth-of-type(3) { top: 70px; left: 20px; }
+
+  .crater.small:nth-of-type(4) { top: 25px; left: 50px; }
+
+  .crater.large:nth-of-type(5) { top: 40px; left: 10px; }
+
+  .star {
+
+    position: fixed;
+
+    width: 2px;
+
+    height: 2px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 2px #fff, 0 0 5px #fff;
+
+    animation: shine 2s infinite ease-in-out;
+
+  }
+ @keyframes shine {
+
+    0%, 100% {
+
+      opacity: 0.5;
+
+    }
+
+    50% {
+
+      opacity: 1;
+
+    }
+
+  }
+
